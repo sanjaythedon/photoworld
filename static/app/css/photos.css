@@ -1,0 +1,50 @@
+.mainDiv{
+    min-height: 100vh;
+    width: 100vw;
+    background: #8080803d;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.formSection {
+    width: 40%;
+    translate: 0 20%;
+    background: white;
+    height: 40%;
+    box-shadow: 5px 5px 5px 0px;
+    padding: 25px 30px;
+}
+
+.images {
+    aspect-ratio: 1/1;
+    width: 24.3%;
+    object-fit: cover;
+    height: 50px;
+}
+
+.img-thumbnail {
+    height: 0;
+    padding: 1.25rem;
+    border:2px solid white;
+    margin: 5px 5px;
+}
+
+.photoDiv {
+    background: #8080803d;
+    min-height: 100vh;
+    width: calc(98vw + 14px);
+}
+
+
+.heading {
+    font-size: xxx-large;
+    border-bottom: 2px solid black;
+    font-family: sans-serif;
+    height: fit-content;
+}
+
+.section2 {
+    display: flex;
+    flex-wrap: wrap;
+}

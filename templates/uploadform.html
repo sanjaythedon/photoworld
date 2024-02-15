@@ -1,0 +1,16 @@
+{% extends 'abstract.html' %}
+{% block content %}
+    <div class="mainDiv">
+        <form class="formSection" action="{% url 'photos:uploadphoto' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="upload_photo" class="form-label">Please Upload your Photo: </label>
+                <input class="form-control border-black" type="file" name="upload_photo" id="upload_photo" accept="image/*"/>
+            </div>
+            <div>
+                <button class="btn btn-success" style="float:right;">Upload</button>
+            </div>
+            
+        </form>
+    </div>
+{% endblock %}

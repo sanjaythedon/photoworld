@@ -1,1 +1,7 @@
 venv/
+media
+migrations
+db.sqlite3
+Readme.docx
+Readme.pdf
+__pycache__

@@ -1,0 +1,29 @@
+{% extends 'abstract.html' %}
+{% block content %}
+    <div class="mainDiv">
+        <form class="formSection" action="{% url 'photos:signup' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control border-black" name="email" id="email" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control border-black" name="username" id="username" aria-describedby="emailHelp">
+                {% if already_exists %}
+                <div style="color:red;">
+                    Username already exists!
+                </div>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+                <label for="pw" class="form-label">Password</label>
+                <input type="password" class="form-control border-black" name="password" id="pw">
+            </div>
+            <div>
+                <button class="btn btn-outline-success" style="float:right;">Sign up</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+    

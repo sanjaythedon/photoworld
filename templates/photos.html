@@ -1,0 +1,17 @@
+{% extends 'abstract.html' %}
+{% block content %}
+    <div class="photoDiv">
+        <section>
+            <h4 class="heading">
+                Hello {{ username }}, This is your Photowall!
+            </h4>
+        </section>
+        
+        <section class="section2">
+            {% for photo_file in photos %}
+                <img id="pics" class="img-thumbnail images" src="media/{{ photo_file.filepath }}" alt="">
+            {% endfor %}
+        </section>
+    </div>
+{% endblock %}
+    

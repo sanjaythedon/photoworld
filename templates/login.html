@@ -1,0 +1,29 @@
+{% extends 'abstract.html' %}
+{% block content %}
+    <div class="mainDiv">
+        <form class="formSection" action="{% url 'photos:login' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if invalid_user %}
+            <div style="color:red">
+                Invalid username or password!
+            </div>
+            {% endif %}
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control border-black" name="username" id="username" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="pw" class="form-label">Password</label>
+                <input type="password" class="form-control border-black" name="password" id="pw">
+            </div>
+            <div>
+                <button class="btn btn-outline-success" style="float:right;">Log in</button>
+            </div>
+            <div>
+                New to the site? <a href="{% url 'photos:signup' %}">
+                    Sign Up
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}
