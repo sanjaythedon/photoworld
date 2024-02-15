@@ -1,5 +1,7 @@
 venv/
-media
+*.jpg
+*.png
+*.jpeg
 migrations
 db.sqlite3
 Readme.docx
